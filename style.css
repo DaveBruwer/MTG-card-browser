@@ -1,0 +1,55 @@
+body {
+	background-color: black;
+	color: white;
+}
+
+/*.flexcontainer {
+	display: flex;
+	align-content: center;	
+}
+
+#App {
+	flex-direction: column;
+}
+
+#headerdiv {
+	flex-direction: column;
+	justify-content: center;
+}
+
+#inputdiv {
+	flex-wrap: wrap;
+}
+
+.center {
+
+}*/
+
+#cardDetails {
+	padding: 15px;
+	flex-direction: column;
+	flex: none;
+} 
+
+.yatra {
+	font-family: 'Yatra One', cursive;	
+}
+
+
+#cardName {
+	margin-bottom: 0px;
+}
+
+#headerdiv {
+
+}
+
+
+#header {
+	margin-top: 0px;
+}
+
+#cardImage {
+	border: 5px solid whitesmoke;
+	border-radius: 7%;
+}

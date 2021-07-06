@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>MTG Browser</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="th.jpg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div id="App" class="flexcontainer">
+		<div id="headerdiv" class="yatra flexcontainer">
+			<img src="logo.jpg" alt="Magic the Gathering" width="400">
+			<h1 id="header">Card Browser</h1>
+		</div>
+		<div id="inputdiv" class="yatra flexcontainer">
+			Enter a known card ID (number):<br>
+			<input type="text" name="carnNumber" v-model="cardNumber" @keyup.enter="getCard" >
+			<button @click="getCard">Go</button><br>
+			Find a random card:
+			<button @click="findRandomCard">Random</button>
+		</div>
+		<div id="cardDetails" v-if="displayCardDetails" class="flexcontainer">
+			<img :src="cardImageURL" id="cardImage">
+			<h2 id="cardName">{{cardName}}</h2>
+			<div>{{cardType}}</div>
+			<h3>{{cardText}}</h3>
+			<h3><em>{{cardFlavor}}</em></h3>
+		</div>
+	</div>
+
+	<script src="https://unpkg.com/vue@next"></script>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
