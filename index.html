@@ -9,20 +9,20 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="flexcontainer">
 	<div id="App" class="flexcontainer">
-		<div id="headerdiv" class="yatra flexcontainer">
+		<div id="headerdiv" class="yatra">
 			<img src="logo.jpg" alt="Magic the Gathering" width="400">
 			<h1 id="header">Card Browser</h1>
 		</div>
-		<div id="inputdiv" class="yatra flexcontainer">
+		<div id="inputdiv" class="yatra">
 			Enter a known card ID (number):<br>
 			<input type="text" name="carnNumber" v-model="cardNumber" @keyup.enter="getCard" >
 			<button @click="getCard">Go</button><br>
 			Find a random card:
 			<button @click="findRandomCard">Random</button>
 		</div>
-		<div id="cardDetails" v-if="displayCardDetails" class="flexcontainer">
+		<div id="cardDetails" class="flexcontainer" v-if="displayCardDetails" >
 			<img :src="cardImageURL" id="cardImage">
 			<h2 id="cardName">{{cardName}}</h2>
 			<div>{{cardType}}</div>

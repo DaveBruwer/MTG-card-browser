@@ -2,7 +2,7 @@ Vue.createApp({
 	data() {
 		return {
 			header1: "Magic the Gathering Card Browser",
-			cardNumber: 249713,
+			cardNumber: 489838,
 			displayCardDetails: true,
 			apiURL: "https://api.magicthegathering.io/v1/cards/",
 			testCardNo: 2,
